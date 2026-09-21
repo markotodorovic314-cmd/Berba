@@ -391,13 +391,12 @@ svg { width: 1.15rem; height: 1.15rem; stroke-width: 1.8; }
 .api-summary-card { min-width: 0; min-height: 7.4rem; padding: .9rem; border: 1px solid var(--line); border-radius: 13px; background: #fff; display: grid; grid-template-columns: 2.35rem minmax(0,1fr); gap: .7rem; align-items: start; box-shadow: var(--shadow-sm); }
 .api-summary-icon { width: 2.35rem; height: 2.35rem; border-radius: 10px; display: grid; place-items: center; background: var(--wine-50); color: var(--wine-700); }
 .api-summary-card > div { min-width: 0; display: grid; align-content: start; gap: .28rem; }
-.api-summary-card code, .endpoint-pill, .api-map-row code, .api-method-line code { overflow-wrap: anywhere; color: var(--wine-700); font-family: ui-monospace,SFMono-Regular,Consolas,monospace; font-size: .61rem; font-weight: 800; }
 .api-summary-card strong { font-size: .72rem; line-height: 1.35; }
 .api-summary-card span:last-child { color: var(--muted); font-size: .62rem; line-height: 1.45; }
 .endpoint-pill { padding: .38rem .55rem; border-radius: 8px; background: var(--wine-50); white-space: nowrap; }
 .integration-review-grid { margin-top: 1rem; display: grid; grid-template-columns: minmax(0,1.3fr) minmax(19rem,.7fr); gap: 1rem; align-items: start; }
 .api-map-list { padding: .25rem 1rem .55rem; }
-.api-map-row { min-height: 4.2rem; padding: .65rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: minmax(0,1.2fr) minmax(9rem,.8fr) auto; gap: .75rem; align-items: center; }
+.api-map-row { min-height: 4.2rem; padding: .65rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: minmax(0,1fr) auto; gap: .75rem; align-items: center; }
 .api-map-row:last-child { border-bottom: 0; }
 .api-map-row > div { min-width: 0; display: grid; gap: .2rem; }
 .api-map-row > div strong { font-size: .72rem; }
@@ -420,6 +419,19 @@ svg { width: 1.15rem; height: 1.15rem; stroke-width: 1.8; }
 .api-note svg { flex: 0 0 auto; margin-top: .05rem; }
 .api-note.good { background: var(--green-100); color: #245d4c; }
 .api-note.review { background: var(--gold-100); color: #6e5525; }
+.business-flow-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .75rem; }
+.business-step { min-width: 0; min-height: 10.5rem; position: relative; padding: 1rem; border: 1px solid var(--line); border-radius: 13px; background: linear-gradient(145deg,#fff,#fdfafa); display: grid; align-content: start; gap: .45rem; }
+.business-step-number { width: 1.55rem; height: 1.55rem; border-radius: 999px; background: var(--wine-950); color: #fff; display: grid; place-items: center; font-size: .62rem; font-weight: 900; }
+.business-step-icon { width: 2.25rem; height: 2.25rem; margin-top: .15rem; border-radius: 9px; background: var(--wine-50); color: var(--wine-700); display: grid; place-items: center; }
+.business-step strong { margin-top: .15rem; font-size: .72rem; line-height: 1.4; }
+.business-step > span:last-child { color: var(--muted); font-size: .63rem; line-height: 1.5; }
+.benefit-list .api-question { border-color: var(--line); background: #fff; }
+.benefit-list .api-question-icon { background: var(--green-100); color: var(--green); }
+.implementation-note { padding: .8rem; border-radius: 10px; background: var(--gold-100); color: #6e5525; display: flex; gap: .55rem; align-items: flex-start; font-size: .63rem; line-height: 1.5; }
+.implementation-note svg { flex: 0 0 auto; margin-top: .05rem; }
+.automation-stage-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .8rem; }
+.automation-stage { min-height: 10rem; padding: 1rem; border: 1px solid var(--line); border-radius: 12px; background: #fff; display: grid; align-content: start; gap: .65rem; }
+.automation-stage p { margin: 0; color: var(--muted); font-size: .68rem; line-height: 1.65; }
 
 .cart-drawer, .notification-drawer { width: min(100%, 28rem); height: 100%; position: fixed; right: 0; top: 0; z-index: 61; background: #fff; box-shadow: -20px 0 70px rgba(30,15,20,.23); display: flex; flex-direction: column; animation: slideIn .22s ease; }
 .notification-drawer { width: min(100%, 27rem); }
@@ -533,7 +545,8 @@ svg { width: 1.15rem; height: 1.15rem; stroke-width: 1.8; }
   .topbar { padding: 0 1rem; }
   .page { padding: 1.4rem 1rem 3rem; }
   .dashboard-grid, .quick-layout, .document-layout, .checkout-layout { grid-template-columns: 1fr; }
-  .integration-review-grid, .api-payload-grid { grid-template-columns: 1fr; }
+  .integration-review-grid, .api-payload-grid, .automation-stage-grid { grid-template-columns: 1fr; }
+  .business-flow-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .document-modal-grid { grid-template-columns: 1fr; }
   .document-summary { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .partner-hero { grid-template-columns: 1fr; }
@@ -585,9 +598,7 @@ svg { width: 1.15rem; height: 1.15rem; stroke-width: 1.8; }
   .api-confirmed-banner { grid-template-columns: 2.6rem minmax(0,1fr); }
   .api-confirmed-banner > .status { grid-column: 2; justify-self: start; }
   .api-summary-grid { grid-template-columns: 1fr; }
-  .api-map-row { grid-template-columns: minmax(0,1fr) auto; }
-  .api-map-row code { grid-column: 1; grid-row: 2; }
-  .api-map-row > .status { grid-column: 2; grid-row: 1 / span 2; }
+  .business-flow-grid { grid-template-columns: 1fr; }
   .api-payload { min-height: 12rem; }
 }
 
