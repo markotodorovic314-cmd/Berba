@@ -1,8 +1,15 @@
-# Berba B2B portal — interactive demo
+# Berba B2B portal — demonstracioni prikaz
 
-Interactive concept for Berba's retail and HoReCa customer ordering portal, connected to the existing Bencom Abacus ERP.
+Interaktivni prototip portala za Berbine HoReCa i maloprodajne kupce.
 
-The demo includes customer-specific catalogues and prices, stock visibility, quick/repeat ordering, purchase-order import, order tracking, documents, customer administration, inventory controls, and the proposed Abacus data flow.
+## Šta prikazuje
 
-All prices, inventory values, customer accounts, order values, and operational statuses are illustrative demo data and do not constitute a commercial offer. Product and brand imagery belongs to Berba and the respective producers.
+- katalog sa cenama, raspoloživim stanjem i količinskim rabatima;
+- brzu porudžbinu po nazivu ili šifri artikla;
+- uvoz porudžbenice iz XLSX, CSV, XML, PDF ili fotografije;
+- korpu sa automatski primenjenim rabatom;
+- istoriju, status i blokiranu porudžbinu;
+- admin pregled porudžbina, kupaca, lagera, cenovnika i dokumenata;
+- poslovni tok povezivanja sa Abacus ERP sistemom.
 
+Podaci, cene i stanja u prototipu služe isključivo za demonstraciju.
